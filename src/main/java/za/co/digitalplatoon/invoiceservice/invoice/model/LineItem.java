@@ -1,7 +1,6 @@
 package za.co.digitalplatoon.invoiceservice.invoice.model;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 @Entity
@@ -10,13 +9,13 @@ public class LineItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    @NotNull
+    //@NotNull
     private Long quantity;
 
-    @NotNull
+   // @NotNull
     private String description;
 
-    @NotNull
+    //@NotNull
     private BigDecimal unitPrice;
 
     @ManyToOne

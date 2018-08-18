@@ -26,7 +26,6 @@ public class Invoice {
 
     @OneToMany(targetEntity = LineItem.class, mappedBy = "invoice", fetch = FetchType.EAGER)
     @Cascade({CascadeType.SAVE_UPDATE})
-    @Column
     private Set<LineItem> lineItems = new HashSet<>();
 
     public Invoice() {
